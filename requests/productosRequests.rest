@@ -1,0 +1,34 @@
+### GET ALL
+GET http://localhost:3000/api/productos
+
+### GET BY ID
+GET http://localhost:3000/api/productos/60b2a079f8d42d2a70efaccb
+
+### POST
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+    "codigoEAN": 7790000000017,
+    "denominacion": "trigo",
+    "unidadMedida": "tonelada",
+    "cantidaProd": 11,
+    "cantidadVen": 1,
+    "precioUnidad": 11
+}
+
+### PUT
+PUT http://localhost:3000/api/productos/60b2ad10ce0feb3bc83ecf2a
+Content-Type: application/json
+
+{
+    "codigoEAN": 779000000007,
+    "denominacion": "soja",
+    "unidadMedida": "tonelada",
+    "cantidaProd": 10,
+    "cantidadVen": 1,
+    "precioUnidad": 10
+}
+
+### DELETE
+DELETE http://localhost:3000/api/productos/60b2b0a6eb379d0740d927bb

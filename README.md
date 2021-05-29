@@ -5,41 +5,48 @@
 // Empresa
 
 {
-    cuil: integer,
-    nombre: string,
-    email: string,
-    telefono: string,
-    sitioWeb: string,
-    contraseña: string
+cuil: integer,
+nombre: string,
+email: string,
+telefono: string,
+sitioWeb: string,
+contraseña: string
 }
 
-// Producto
+// Ventas
 
 {
-    idProducto: integer,
-    denominacion: string,
-    cod_ean:integer,
-    precio_unidad: integer,
-    unidad_medida: string,
-    cantida_prod: integer,
-    cantidad_ven: integer
+    denominacion: {
+        type: String,
+        require: true,
+        trim: true,
+    },
+    codigoEAN: { type: Number, require: true, trim: true },
+    precioUnidad: { type: Number, require: true, trim: true },
+    unidadMedida: {
+        type: String,
+        require: true,
+        trim: true,
+    },
+    cantidaProd: { type: Number, require: true, trim: true },
+    cantidadVen: { type: Number, require: true, trim: true },
 }
 
-// Informes
+// Informes / Declaracion jurada
 
 {
-    cuit: integer,
-    rason_social: string,
-    fecha_emision: date,
-    productos: [producto]
+"cuit": integer,
+"year": interger,
+"month": integer,
+"ventas": [ventas]
 }
 
 // Notificaciones
 
 {
-    idNotificacion: integer,
-    titulo: string,
-    descripcion: string,
-    fechaEmision: date,
-    fechaRecepcion: date
+idNotificacion: integer,
+titulo: string,
+descripcion: string,
+fechaEmision: date,
+fechaRecepcion: date
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "dev": "nodemon --exec babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +20,14 @@
   "homepage": "https://github.com/miaguirre22/2021-TPI-G11#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
     "express": "^4.17.1",
-    "mongoose": "^5.12.7",
+    "mongoose": "^5.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
     "nodemon": "^2.0.7"
   }
 }
