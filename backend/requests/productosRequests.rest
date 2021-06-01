@@ -10,20 +10,20 @@ POST http://localhost:3000/api/productos
 Content-Type: application/json
 
 {
-    "codigoEAN": 7790000000007,
-    "denominacion": "algodon",
+    "codigoEAN": 7790000000017,
+    "denominacion": "soja",
     "unidadMedida": "tonelada",
-    "cantidaProd": 11,
-    "cantidadVen": 1,
-    "precioUnidad": 11
+    "cantidaProd": 10,
+    "cantidadVen": 10,
+    "precioUnidad": 10
 }
 
 ### PUT
-PUT http://localhost:3000/api/productos/60b52c4732602c3a880e32a2
+PUT http://localhost:3000/api/productos/60b6ae3fb900e54de8afb8c4
 Content-Type: application/json
 
 {
-    "codigoEAN": 779000000007,
+    "codigoEAN": 779000000027,
     "denominacion": "trigo",
     "unidadMedida": "tonelada",
     "cantidaProd": 100,
@@ -32,4 +32,4 @@ Content-Type: application/json
 }
 
 ### DELETE
-DELETE http://localhost:3000/api/productos/60b2b0a6eb379d0740d927b
+DELETE http://localhost:3000/api/productos/60b6ae3fb900e54de8afb8c4

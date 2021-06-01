@@ -6,6 +6,7 @@ const InformeSchema = new Schema({
     cuil: Number,
     year: Number,
     month: Number,
+    rectificacion: Bool,
     ventas: [{
         type: Schema.Types.ObjectId,
         ref: 'Venta'
