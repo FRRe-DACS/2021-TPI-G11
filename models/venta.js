@@ -1,11 +1,6 @@
-// "use strict";
+import { Schema, model } from "mongoose";
 
-// const mongoose = require("mongoose");
-// const Schema = mongoose.Schema;
-import { Schema, model, models } from "mongoose";
-import uniqueValidator from "mongoose-unique-validator";
-
-const ProductoSchema = new Schema({
+const VentaSchema = new Schema({
   denominacion: {
     type: String,
     require: [true, "Denominación es requerido."],
@@ -39,19 +34,4 @@ const ProductoSchema = new Schema({
   },
 });
 
-ProductoSchema.set("toJSON", {
-  transform: (document, returnedObject) => {
-    returnedObject.id = returnedObject._id;
-    delete returnedObject._id;
-    delete returnedObject.__v;
-  },
-});
-
-// ProductoSchema.path("codigoEAN").validate(async (ean) => {
-//   const countEAN = await models.Producto.countDocuments({ ean });
-//   return !countEAN;
-// }, "Código EAN debe ser único.");
-
-ProductoSchema.plugin(uniqueValidator);
-
-module.exports = model("Producto", ProductoSchema);
+module.exports = model("Venta", VentaSchema);
